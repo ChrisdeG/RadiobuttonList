@@ -193,7 +193,9 @@ define([
 		},
 
 		_createRadiobuttonNodes: function () {
-
+			if (this._beingDestroyed || this.destroyed) {
+				return;
+			}
 			var labelNode = null,
 				radioButtonNode = null,
 				i = 0,
